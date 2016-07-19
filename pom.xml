@@ -3,12 +3,32 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.alexandriasoftware</groupId>
     <artifactId>applescript</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0</version>
     <packaging>jar</packaging>
+    <url>https://rhwood.github.io/applescript</url>
+
+    <scm>
+        <connection>scm:git:https://github.com/rhwood/applescript.git</connection>
+        <developerConnection>scm:git:https://github.com/rhwood/applescript.git</developerConnection>
+        <url>https://github.com/rhwood/applescript</url>
+        <tag>site</tag>
+    </scm>
+    <issueManagement>
+        <system>github</system>
+        <url>https://github.com/rhwood/applescript/issues</url>
+    </issueManagement>
+    <distributionManagement>
+        <site>
+            <id>github</id>
+            <url>scm:git:https://github.com/rhwood/applescript.git</url>
+        </site>
+    </distributionManagement>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
+        <!-- define github authentication in settings.xml -->
+        <github.global.server>github</github.global.server>
     </properties>
     <build>
         <plugins>
@@ -16,7 +36,41 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-site-plugin</artifactId>
                 <version>3.5.1</version>
+                <configuration>
+                    <skipDeploy>true</skipDeploy><!-- don't deploy site with maven-site-plugin -->
+                </configuration>
             </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <version>3.0.1</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>2.10.4</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-deploy-plugin</artifactId>
+                <version>2.8.2</version>
+            </plugin>
+            <plugin>
+                <groupId>com.github.github</groupId>
+                <artifactId>site-maven-plugin</artifactId>
+                <version>0.12</version>
+                <configuration>
+                    <message>Creating site for ${project.version}</message>
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>site</goal>
+                        </goals>
+                        <phase>site-deploy</phase>
+                    </execution>
+                </executions>
+            </plugin>        
         </plugins>
     </build>        
     <reporting>
