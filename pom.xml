@@ -8,6 +8,10 @@
     <url>https://rhwood.github.io/applescript</url>
     <name>JMRI AppleScript Support</name>
     <description>JMRI AppleScript Support provides optional support in JMRI for AppleScript on Java 8</description>
+    <organization>
+        <name>JMRI Project</name>
+        <url>http://jmri.org</url>
+    </organization>
     <developers>
         <developer>
             <name>Randall Wood</name>
