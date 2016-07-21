@@ -62,9 +62,9 @@
                 
       <li>
   
-                          <a href="jmri.html" title="For JMRI Users">
+                          <a href="jmri.html" title="Use with JMRI">
           <span class="none"></span>
-        For JMRI Users</a>
+        Use with JMRI</a>
             </li>
                 
       <li>
@@ -166,9 +166,20 @@
                                   
             <div class="section">
 <h2><a name="Introduction_to_JMRI_AppleScript_Support"></a>Introduction to JMRI AppleScript Support</h2>
-<p><i>JMRI AppleScript Support</i> is an easy way to add the <a class="externalLink" href="https://developer.apple.com/library/mac/documentation/AppleScript/Conceptual/AppleScriptX/AppleScriptX.html">AppleScript</a> scripting language available on macOS to an application that supports scripting via the Java <a class="externalLink" href="http://docs.oracle.com/javase/8/docs/api/javax/script/package-summary.html">scripting API</a>.</p>
+<p><i>JMRI AppleScript Support</i> is an easy way to add the <a class="externalLink" href="https://developer.apple.com/library/mac/documentation/AppleScript/Conceptual/AppleScriptX/AppleScriptX.html">AppleScript</a> scripting language available only on macOS to an application that supports scripting via the Java <a class="externalLink" href="http://docs.oracle.com/javase/8/docs/api/javax/script/package-summary.html">scripting API</a>.</p>
 <p>Java versions 7 and 8 for macOS include AppleScript support, but do not advertise it to Java applications. This JAR advertises that support to Java applications running on macOS under Java 1.7 or 1.8.</p>
-<p>Java version 9 drops AppleScript support entirely, so this JAR provides no benefits on that version of Java.</p></div>
+<p>Java version 9 is expected to drop AppleScript support entirely, so this JAR provides no benefits on that version of Java.</p></div>
+<div class="section">
+<h2><a name="Use_with_JMRI"></a>Use with JMRI</h2>
+<p>You can add AppleScript support to JMRI by entering the following command in a <i>Terminal.app</i> window:</p>
+
+<div class="source">
+<div class="source"><pre class="prettyprint">bash &lt;( curl -sSL https://rhwood.github.io/applescript/install.sh )
+</pre></div></div>
+<p>You can also <a href="jmri.html">install manually</a>.</p></div>
+<div class="section">
+<h2><a name="Developers"></a>Developers</h2>
+<p>You can add AppleScript support to your Java application by bundling <a class="externalLink" href="https://github.com/rhwood/applescript/releases/tag/v1.0">applescript-1.0.jar</a> with your application. <a href="developers.html">Learn More</a> </p></div>
                   </div>
             </div>
           </div>

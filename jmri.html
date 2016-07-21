@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="Date-Revision-yyyymmdd" content="20160721" />
     <meta http-equiv="Content-Language" content="en" />
-    <title>JMRI AppleScript Support &#x2013; Using with JMRI</title>
+    <title>JMRI AppleScript Support &#x2013; Use with JMRI</title>
     <link rel="stylesheet" href="./css/apache-maven-fluido-1.5.min.css" />
     <link rel="stylesheet" href="./css/site.css" />
     <link rel="stylesheet" href="./css/print.css" media="print" />
@@ -64,7 +64,7 @@
                 
       <li class="active">
   
-            <a href="#"><span class="none"></span>For JMRI Users</a>
+            <a href="#"><span class="none"></span>Use with JMRI</a>
           </li>
                 
       <li>
@@ -102,35 +102,54 @@
         <div id="bodyColumn"  class="span10" >
                                   
             <div class="section">
-<h2><a name="Using_with_JMRI"></a>Using with JMRI</h2>
-<p>JMRI users on macOS who wish to leverage AppleScript need to perform the following tasks to use this:</p>
+<h2><a name="Use_with_JMRI"></a>Use with JMRI</h2>
+<p>If you use JMRI (version 4.5.2 or newer) on macOS and wish to use AppleScript to automate activities in JMRI, you can install support either automatically or manually.</p>
+<div class="section">
+<h3><a name="Automatic_Installation"></a>Automatic Installation</h3>
 
 <ol style="list-style-type: decimal">
   
-<li>Download the <a class="externalLink" href="https://github.com/rhwood/applescript/releases/tag/v1.0">version 1.0</a> of <i>JMRI AppleScript Support</i> to the <i>Downloads</i> folder</li>
-  
-<li>Open <i>Terminal.app</i> and enter the following commands, pressing the Enter key after each command:
-  
-<ol style="list-style-type: decimal">
-    
-<li><tt>mkdir -p ~/Library/Preferences/JMRI/lib</tt></li>
-    
-<li><tt>mv ~/Downloads/applescript-1.0.jar ~/Library/Preferences/JMRI/lib</tt></li>
-    
-<li><tt>cp -n /Applications/JMRI/jmri.conf ~/Library/Preferences/JMRI/jmri.conf</tt></li>
-    
-<li><tt>open -e ~/Library/Preferences/JMRI/jmri.conf</tt></li>
-  </ol></li>
-  
 <li>
-<p>Edit <i>jmri.conf</i> to change <tt>default_options=&quot;&quot;</tt> reads:</p>
+<p>Enter the following command in a <i>Terminal.app</i> window and press the Enter key:</p>
   
 <div class="source">
-<div class="source"><pre class="prettyprint">default_options=&quot;--cp:a=~/Library/Preferences/JMRI/lib/applescript-1.0.jar&quot;
+<div class="source"><pre class="prettyprint">bash &lt;( curl -sSL https://rhwood.github.io/applescript/install.sh )
 </pre></div></div></li>
   
-<li>Save <i>jmri.conf</i>. When <i>DecoderPro</i> or <i>PanelPro</i> next starts, it will be able to use AppleScript. This can be verified by selecting the menu item <b>Actions-&gt;Run Script&#x2026;</b> (in <i>DecoderPro</i>) or <b>Panels-&gt;Run Script&#x2026;</b> (in <i>PanelPro</i>) and seeing that <b>AppleScript Files</b> is an option in the <i>File Format</i> pop-up menu.</li>
+<li>
+<p>Start <i>DecoderPro</i> or <i>PanelPro</i>. Verify installation was successful by selecting the menu item <b>Actions-&gt;Run Script&#x2026;</b> (in <i>DecoderPro</i>) or <b>Panels-&gt;Run Script&#x2026;</b> (in <i>PanelPro</i>) and seeing that <b>AppleScript Files</b> is an option in the <i>File Format</i> pop-up menu.</p></li>
 </ol></div>
+<div class="section">
+<h3><a name="Manual_Installation"></a>Manual Installation</h3>
+
+<ol style="list-style-type: decimal">
+  
+<li>
+<p>Download the <a class="externalLink" href="https://github.com/rhwood/applescript/releases/tag/v1.0">version 1.0</a> of <i>JMRI AppleScript Support</i> to the <i>Downloads</i> folder</p></li>
+  
+<li>
+<p>Open <i>Terminal.app</i> and enter the following commands, pressing the Enter key after each command (these commands assume JMRI is installed in <i>/Applications/JMRI</i>):</p>
+  
+<div class="source">
+<div class="source"><pre class="prettyprint">mkdir -p ~/Library/Application\ Support/JMRI/lib
+mv ~/Downloads/applescript-1.0.jar ~/Library/Application\ Support/JMRI/lib
+cp -n /Applications/JMRI/jmri.conf ~/Library/Preferences/JMRI/jmri.conf
+open -e ~/Library/Preferences/JMRI/jmri.conf
+</pre></div></div></li>
+  
+<li>
+<p>Edit <i>jmri.conf</i> to change the line <tt>default_options=&quot;&quot;</tt> to read:</p>
+  
+<div class="source">
+<div class="source"><pre class="prettyprint">default_options=&quot;--cp:a=~/Library/Application\ Support/JMRI/lib/applescript-1.0.jar&quot;
+</pre></div></div></li>
+  
+<li>
+<p>Save <i>jmri.conf</i>.</p></li>
+  
+<li>
+<p>Start <i>DecoderPro</i> or <i>PanelPro</i>. Verify installation was successful by selecting the menu item <b>Actions-&gt;Run Script&#x2026;</b> (in <i>DecoderPro</i>) or <b>Panels-&gt;Run Script&#x2026;</b> (in <i>PanelPro</i>) and seeing that <b>AppleScript Files</b> is an option in the <i>File Format</i> pop-up menu.</p></li>
+</ol></div></div>
                   </div>
             </div>
           </div>
