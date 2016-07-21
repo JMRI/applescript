@@ -38,6 +38,11 @@ after each command (these commands assume JMRI is installed in _/Applications/JM
     default_options="--cp:a=${HOME}/Library/Application\ Support/JMRI/lib/applescript-1.0.jar"
     ```
 
+    If ```default_options``` already contains other text, you can add
+    ``` --cp:a=${HOME}/Library/Application\ Support/JMRI/lib/applescript-1.0.jar```
+    to the existing ```default_options``` just before the closing quotation mark
+    (ensure a space separates this option from the preceding option).
+
 4. Save _jmri.conf_.
 
 5. Start _DecoderPro_ or _PanelPro_. Verify installation was successful by selecting
