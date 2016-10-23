@@ -5,7 +5,7 @@
     <artifactId>applescript</artifactId>
     <version>1.0</version>
     <packaging>jar</packaging>
-    <url>https://rhwood.github.io/applescript</url>
+    <url>https://jmri.github.io/applescript</url>
     <name>JMRI AppleScript Support</name>
     <description>JMRI AppleScript Support provides optional support in JMRI for AppleScript on Java 8</description>
     <organization>
@@ -23,19 +23,19 @@
     </developers>
 
     <scm>
-        <connection>scm:git:https://github.com/rhwood/applescript.git</connection>
-        <developerConnection>scm:git:https://github.com/rhwood/applescript.git</developerConnection>
-        <url>https://github.com/rhwood/applescript</url>
+        <connection>scm:git:https://github.com/JMRI/applescript.git</connection>
+        <developerConnection>scm:git:https://github.com/JMRI/applescript.git</developerConnection>
+        <url>https://github.com/JMRI/applescript</url>
         <tag>site</tag>
     </scm>
     <issueManagement>
         <system>github</system>
-        <url>https://github.com/rhwood/applescript/issues</url>
+        <url>https://github.com/JMRI/applescript/issues</url>
     </issueManagement>
     <distributionManagement>
         <site>
             <id>github</id>
-            <url>scm:git:https://github.com/rhwood/applescript.git</url>
+            <url>scm:git:https://github.com/JMRI/applescript.git</url>
         </site>
     </distributionManagement>
     <properties>

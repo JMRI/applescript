@@ -9,7 +9,7 @@ manually.
 1. Enter the following command in a _Terminal.app_ window and press the Enter key:
     
     ```
-    bash <( curl -sSL https://rhwood.github.io/applescript/install.sh )
+    bash <( curl -sSL https://jmri.github.io/applescript/install.sh )
     ```
 
 2. Start _DecoderPro_ or _PanelPro_. Verify installation was successful by selecting
@@ -19,7 +19,7 @@ is an option in the _File Format_ pop-up menu.
 
 ### Manual Installation
 
-1. Download the [version 1.0](https://github.com/rhwood/applescript/releases/tag/v1.0)
+1. Download the [version 1.0](https://github.com/JMRI/applescript/releases/tag/v1.0)
 of _JMRI AppleScript Support_ to the _Downloads_ folder
 
 2. Open _Terminal.app_ and enter the following commands, pressing the Enter key
