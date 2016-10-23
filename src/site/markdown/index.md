@@ -18,7 +18,7 @@ You can add AppleScript support to JMRI by entering the following command in a
 _Terminal.app_ window:
     
 ```
-bash <( curl -sSL https://rhwood.github.io/applescript/install.sh )
+bash <( curl -sSL https://jmri.github.io/applescript/install.sh )
 ```
 
 You can also [install manually](jmri.html).
@@ -26,5 +26,5 @@ You can also [install manually](jmri.html).
 ## Developers
 
 You can add AppleScript support to your Java application by bundling
-[applescript-1.0.jar](https://github.com/rhwood/applescript/releases/tag/v1.0)
+[applescript-1.0.jar](https://github.com/JMRI/applescript/releases/tag/v1.0)
 with your application. [Learn More](developers.html) 

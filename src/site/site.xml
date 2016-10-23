@@ -7,7 +7,7 @@
             <item name="Introduction" href="index.html"/>
             <item name="Use with JMRI" href="jmri.html"/>
             <item name="For Developers" href="developers.html"/>
-            <item name="Download" href="https://github.com/rhwood/applescript/releases"/>
+            <item name="Download" href="https://github.com/JMRI/applescript/releases"/>
         </menu>
         <menu ref="modules"/>
         <menu ref="reports"/>
