@@ -7,7 +7,7 @@ PREFS=${HOME}/Library/Preferences/JMRI
 mkdir -p "${LIB}"
 cd "${LIB}"
 if [ ! -f "${LIB}/applescript-1.0.jar" ] ; then
-    curl -sSLO https://github.com/rhwood/applescript/releases/download/v1.0/applescript-1.0.jar
+    curl -sSLO https://github.com/JMRI/applescript/releases/download/v1.0/applescript-1.0.jar
 fi
 cd "${PREFS}"
 if [ ! -f "${PREFS}/jmri.conf" ] ; then
